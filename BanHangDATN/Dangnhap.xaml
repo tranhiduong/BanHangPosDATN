@@ -1,0 +1,56 @@
+﻿<Window x:Class="BanHangDATN.Dangnhap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BanHangDATN"
+        mc:Ignorable="d"
+        Title="MainWindow" Loaded="Window_Loaded" Height="800" Width="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition  Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,50" >
+            <TextBlock Text="LOGIN" FontSize="36" FontWeight="Bold" Foreground="#006666" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+            <TextBlock Text="" FontSize="10"/>
+            <StackPanel>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Username: " FontSize="28" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtUsername" KeyboardNavigation.ControlTabNavigation="Contained" FontSize="28" Margin="5"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Password: " FontSize="28" HorizontalAlignment="Right"/>
+                    <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="txtPassword" FontSize="28" PasswordChar="*" Margin="5" />
+
+                </Grid>
+            </StackPanel>
+            <TextBlock Text="" FontSize="10"/>
+
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" Content="Login" Name="btnlogin" BorderBrush="Snow" Background="	#F0E68C" FontSize="28" Click="btnlogin_Click" Foreground="	#006400"  FontWeight="Bold"/>
+
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Grid.ColumnSpan="3" Text="NTT milktea" FontSize="60" FontWeight="UltraBlack" FontStyle="Italic" FontFamily="Lucida Grande"  Foreground="#33cccc" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
